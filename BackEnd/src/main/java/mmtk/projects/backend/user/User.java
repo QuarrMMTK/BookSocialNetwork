@@ -3,6 +3,8 @@ package mmtk.projects.backend.user;
 
 import jakarta.persistence.*;
 import lombok.*;
+import mmtk.projects.backend.book.Book;
+import mmtk.projects.backend.history.BookTransactionHistory;
 import mmtk.projects.backend.role.Role;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -44,6 +46,12 @@ public class User implements UserDetails, Principal {
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
 
+    @OneToMany(mappedBy = "user")
+    private List<BookTransactionHistory> histories;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Book> books;
+
     @CreatedDate
     @Column(updatable = false, nullable = false)
     private LocalDateTime createdDate;
@@ -56,6 +64,7 @@ public class User implements UserDetails, Principal {
     public String getName() {
         return email;
     }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
