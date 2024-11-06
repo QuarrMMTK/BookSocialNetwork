@@ -2,11 +2,6 @@ package mmtk.projects.backend.book;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public record BookRequest(
         Integer id,
         @NotNull(message = "100")

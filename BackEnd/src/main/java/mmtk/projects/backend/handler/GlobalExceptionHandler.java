@@ -1,6 +1,7 @@
 package mmtk.projects.backend.handler;
 
 import jakarta.mail.MessagingException;
+import mmtk.projects.backend.exception.OperationNotPermittedException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
@@ -45,13 +46,6 @@ public class GlobalExceptionHandler {
                 .build());
     }
 
-    @ExceptionHandler(MessagingException.class)
-    public ResponseEntity<ExceptionResponse> handleException(MessagingException exp){
-        return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(ExceptionResponse.builder()
-                .error(exp.getMessage())
-                .build());
-    }
-
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ExceptionResponse> handleException(MethodArgumentNotValidException exp){
         Set<String> errors = new HashSet<>();
@@ -64,12 +58,26 @@ public class GlobalExceptionHandler {
                 .build());
     }
 
+    @ExceptionHandler(OperationNotPermittedException.class)
+    public ResponseEntity<ExceptionResponse> handleException(OperationNotPermittedException exp){
+        return ResponseEntity.status(BAD_REQUEST).body(ExceptionResponse.builder()
+                .error(exp.getMessage())
+                .build());
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ExceptionResponse> handleException(Exception exp){
 //        log the exception
         exp.printStackTrace();
         return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(ExceptionResponse.builder()
                 .businessExceptionDescription("Internal error, contact the admin")
+                .error(exp.getMessage())
+                .build());
+    }
+
+    @ExceptionHandler(MessagingException.class)
+    public ResponseEntity<ExceptionResponse> handleException(MessagingException exp){
+        return ResponseEntity.status(INTERNAL_SERVER_ERROR).body(ExceptionResponse.builder()
                 .error(exp.getMessage())
                 .build());
     }

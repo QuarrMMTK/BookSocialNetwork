@@ -1,5 +1,7 @@
 package mmtk.projects.backend.book;
 
+import mmtk.projects.backend.file.FileUtils;
+import mmtk.projects.backend.history.BookTransactionHistory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,8 +30,20 @@ public class BookMapper {
                 .archived(book.isArchived())
                 .shareable(book.isShareable())
                 .owner(book.getOwner().getName())
-//               todo - implement this later
-//               todo - cover
+                .cover(FileUtils.readFileFromLocation(book.getBookCover()))
                 .build();
+    }
+
+    public BorrowedBookResponse toBorrowedBookResponse(BookTransactionHistory bookTransactionHistory) {
+        return BorrowedBookResponse.builder()
+                .id(bookTransactionHistory.getBook().getId())
+                .title(bookTransactionHistory.getBook().getTitle())
+                .authorName(bookTransactionHistory.getBook().getAuthorName())
+                .isbn(bookTransactionHistory.getBook().getIsbn())
+                .rate(bookTransactionHistory.getBook().getRate())
+                .returned(bookTransactionHistory.isReturned())
+                .returnedApproved(bookTransactionHistory.isReturnApproved())
+                .build();
+
     }
 }
