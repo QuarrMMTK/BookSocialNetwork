@@ -22,6 +22,11 @@ import java.util.Objects;
 
 import static mmtk.projects.backend.book.BookSpecification.withOwnerId;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Service
 @Slf4j
 @RequiredArgsConstructor

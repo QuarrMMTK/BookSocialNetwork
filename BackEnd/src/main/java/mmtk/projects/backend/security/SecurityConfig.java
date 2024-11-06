@@ -14,6 +14,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor

@@ -12,6 +12,11 @@ import mmtk.projects.backend.book.Book;
 import mmtk.projects.backend.common.BaseEntity;
 import mmtk.projects.backend.user.User;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Getter
 @Setter
 @SuperBuilder

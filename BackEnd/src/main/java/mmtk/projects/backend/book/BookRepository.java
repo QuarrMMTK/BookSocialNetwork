@@ -7,6 +7,11 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Repository
 public interface BookRepository extends JpaRepository<Book, Integer>, JpaSpecificationExecutor<Book> {
     @Query(

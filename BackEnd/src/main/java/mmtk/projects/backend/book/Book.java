@@ -7,14 +7,13 @@ import mmtk.projects.backend.common.BaseEntity;
 import mmtk.projects.backend.feedback.FeedBack;
 import mmtk.projects.backend.history.BookTransactionHistory;
 import mmtk.projects.backend.user.User;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
-
-import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Getter
 @Setter
 @AllArgsConstructor

@@ -3,11 +3,14 @@ package mmtk.projects.backend.token;
 import jakarta.persistence.*;
 import lombok.*;
 import mmtk.projects.backend.user.User;
-import org.springframework.cglib.core.Local;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Getter
 @Setter
 @Builder

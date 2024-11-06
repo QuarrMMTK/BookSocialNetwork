@@ -18,6 +18,11 @@ import java.io.IOException;
 
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Service
 @RequiredArgsConstructor
 public class JwtAuthFilter extends OncePerRequestFilter {

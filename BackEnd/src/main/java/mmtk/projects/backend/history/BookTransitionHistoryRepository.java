@@ -1,15 +1,19 @@
 package mmtk.projects.backend.history;
 
-import mmtk.projects.backend.book.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
+@Repository
 public interface BookTransitionHistoryRepository extends JpaRepository<BookTransactionHistory, Integer> {
 
     @Query(

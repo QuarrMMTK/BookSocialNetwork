@@ -4,6 +4,11 @@ import mmtk.projects.backend.file.FileUtils;
 import mmtk.projects.backend.history.BookTransactionHistory;
 import org.springframework.stereotype.Service;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @Service
 public class BookMapper {
 

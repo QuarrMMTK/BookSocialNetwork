@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
- * Author : Name
+ * Author : Min Myat Thu Kha
  * Created At : 03/11/2024, Nov ,14, 40
  * Project Name : BookSocialNetwork
  **/

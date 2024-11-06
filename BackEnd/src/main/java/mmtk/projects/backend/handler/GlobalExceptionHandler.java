@@ -16,6 +16,11 @@ import java.util.Set;
 import static mmtk.projects.backend.handler.BusinessErrorCode.*;
 import static org.springframework.http.HttpStatus.*;
 
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

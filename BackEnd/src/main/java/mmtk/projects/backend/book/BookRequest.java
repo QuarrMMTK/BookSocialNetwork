@@ -2,6 +2,12 @@ package mmtk.projects.backend.book;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+
+/**
+ * Author : Min Myat Thu Kha
+ * Created At : 03/11/2024, Nov ,14, 24
+ * Project Name : BookSocialNetwork
+ **/
 public record BookRequest(
         Integer id,
         @NotNull(message = "100")
